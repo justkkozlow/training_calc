@@ -13,8 +13,7 @@ print_error = 'Ошибка! Введите корректное значени�
 operators = ['+', '-', '/', '*', '**']
 
 
-
-def main ():
+def main():
     print(print_welcome)
     prev_result = 0
 
@@ -46,8 +45,8 @@ def main ():
         except KeyboardInterrupt:
             break
 
-def choose_action(num1, operator, num2):
 
+def choose_action(num1, operator, num2):
     if operator == '+':
         return addition(num1, num2)
     if operator == '-':
@@ -58,6 +57,7 @@ def choose_action(num1, operator, num2):
         return multiplication(num1, num2)
     if operator == '**':
         return exponentiation(num1, num2)
+
 
 def get_expression(prev_result):
     try:
@@ -75,20 +75,26 @@ def get_expression(prev_result):
     except ValueError:
         print(print_error)
 
+
 def addition(num1, num2):
     return num1 + num2
+
 
 def subtraction(num1, num2):
     return num1 - num2
 
+
 def division(num1, num2):
     return num1 / num2
+
 
 def multiplication(num1, num2):
     return num1 * num2
 
+
 def exponentiation(num1, num2):
     return num1 ** num2
+
 
 if __name__ == '__main__':
     main()
